@@ -1,0 +1,21 @@
+{% extends "layouts/base.html" %}
+{% block title %}{{title}}{% endblock %}
+{% block head %}
+    {{ super() }}
+{% endblock %}
+{% block content %}
+    <div class="row text-left">
+        <h1>{{ title}}</h1>
+
+        <ol>
+            <li>Draw Phase - Draw one card. If your turn is the very first turn of the game, you do not draw a card. You may play up to one focus from your hand in this phase.</li>
+            <li>Upkeep Phase - Update all turn-based effects, abilities, spells, and counters in this phase. Any abilities or effects that occur each turn or count up/down are triggered during this phase.
+            </li>
+            <li>Main Phase - This is the phase where you are able to use your focus to summon any creatures out of your hand onto the field. Do this by expending the necessary focus needed, you may indicate this by flipping the expened focus facedown. Your opponent cannot respond with any cards at all during this phase. Any creature abilities that have an “enter the field” effect are triggered in this phase. This is the last phase that you are allowed to summon creatures from your hand.</li>
+            <li>Battle Phase - In this phase you and your opponent may both play any non-creature cards from your hand if you have the necessary focus to cast them. This includes but is not limited to; spells, curses, flashes, poisons, effects, and buffs. Players may also use any activated abilities on any creatures that are in play, again, assuming they can use the necessary focus to activate them. Players may use their creatures to attack their opponent’s creatures during this phase, but they cannot go for relics.</li>
+            <li>Relic Phase - This phase is identical to the battle phase, with the exception that you may now attempt to attack for a relic or relics if you have any creatures that are not expended.</li>
+            <li>End Phase - In this phase, everything that is expended gets reset for both players. You may not play any cards or activate any abilities during this phase. The player whose turn it is must have seven cards in their hand during this phase. If they have more than seven cards, they must discard down to seven, if they have less, they must draw up to seven cards. After this, end the turn.</li>
+        </ol>
+    </div>
+    <br/><br/>
+{% endblock %}
